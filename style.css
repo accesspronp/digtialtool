@@ -174,3 +174,250 @@ height:100%;
 object-fit:cover;
 display:block;
 }
+
+.full-banner{width:100%;height:auto;display:block;}
+
+
+/* Added product-card polish for expanded catalogue */
+.product-card h4{
+  color:#f8fafc;
+}
+.nav-dropdown .item img{
+  border-radius:10px;
+  object-fit:cover;
+}
+@media(max-width:520px){
+  .section-head{align-items:flex-start;gap:14px;flex-direction:column}
+  .grid{grid-template-columns:1fr}
+}
+
+
+/* Full footer + WhatsApp support */
+.site-footer{
+  background:linear-gradient(180deg,#111821 0%,#0b1020 100%);
+  border-top:1px solid #263241;
+  padding:48px 7% 26px;
+  color:#b9c3d0;
+  display:block;
+}
+.footer-main{
+  max-width:1250px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1.45fr 1fr 1fr 1.2fr;
+  gap:34px;
+}
+.footer-col h2,.footer-col h3{color:#fff;margin-bottom:14px;line-height:1.25}
+.footer-col h2{font-size:22px;color:#e69a32}
+.footer-col h3{font-size:17px}
+.footer-col p{line-height:1.65;margin-bottom:10px;color:#cbd5e1}
+.footer-col a{display:block;color:#cbd5e1;text-decoration:none;margin:9px 0;transition:.2s}
+.footer-col a:hover{color:#eab308;transform:translateX(3px)}
+.footer-about p{max-width:430px}
+.social-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.social-links a{
+  margin:0;
+  background:#151c27;
+  border:1px solid #2b3748;
+  border-radius:999px;
+  padding:9px 13px;
+  color:#f8fafc;
+  font-size:13px;
+}
+.social-links a:hover{background:#1f2937;transform:none;color:#eab308}
+.footer-contact a{display:inline-block;margin:0;color:#cbd5e1}
+.payment-title{margin-top:18px}
+.payment-methods{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.payment-methods span{
+  background:#151c27;
+  border:1px solid #2b3748;
+  color:#f8fafc;
+  border-radius:10px;
+  padding:9px 12px;
+  font-size:13px;
+  font-weight:800;
+}
+.trust-row{
+  max-width:1250px;
+  margin:34px auto 0;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+.trust-card{
+  background:#151c27;
+  border:1px solid #2b3748;
+  border-radius:14px;
+  padding:18px;
+}
+.trust-card strong{display:block;color:#fff;margin-bottom:7px;font-size:16px}
+.trust-card span{display:block;color:#aab4c3;font-size:14px;line-height:1.45}
+.footer-bottom{
+  max-width:1250px;
+  margin:28px auto 0;
+  border-top:1px solid #263241;
+  padding-top:20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  color:#9ca3af;
+}
+.legal-links{display:flex;gap:18px;flex-wrap:wrap}
+.legal-links a{color:#9ca3af;text-decoration:none;font-size:14px}
+.legal-links a:hover{color:#eab308}
+.whatsapp-float{
+  position:fixed;
+  left:18px;
+  bottom:18px;
+  z-index:9998;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background:#16a34a;
+  color:#fff;
+  text-decoration:none;
+  border-radius:999px;
+  padding:11px 16px 11px 12px;
+  box-shadow:0 14px 36px rgba(22,163,74,.35);
+  border:1px solid rgba(255,255,255,.18);
+  transition:.25s;
+}
+.whatsapp-float:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(22,163,74,.48)}
+.whatsapp-icon{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:rgba(255,255,255,.18);
+  font-size:21px;
+  font-weight:900;
+}
+.whatsapp-float strong{display:block;font-size:14px;line-height:1.1}
+.whatsapp-float small{display:block;font-size:11px;color:#dcfce7;margin-top:2px}
+@media(max-width:900px){
+  .footer-main{grid-template-columns:1fr 1fr}
+  .trust-row{grid-template-columns:1fr}
+  .footer-bottom{align-items:flex-start;flex-direction:column}
+}
+@media(max-width:560px){
+  .site-footer{padding:38px 16px 26px}
+  .footer-main{grid-template-columns:1fr}
+  .whatsapp-float{left:12px;bottom:12px;padding:10px 13px 10px 10px}
+  .whatsapp-float strong{font-size:13px}
+}
+
+
+/* Minecraft featured card + payment confirmation form */
+.featured-card{
+  border-color:#22c55e;
+  box-shadow:0 16px 44px rgba(34,197,94,.18);
+}
+.featured-card .badges span:first-child{background:#16a34a}
+.featured-card .badges span:nth-child(2){background:#2563eb}
+.featured-card h4{color:#facc15}
+
+.checkout-card{
+  width:min(760px,100%);
+}
+.payment-section{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  align-items:stretch;
+  margin-top:20px;
+}
+.payment-qr-box{
+  padding:18px;
+  margin-top:0;
+}
+.payment-qr-box img{
+  width:min(220px,100%);
+  height:auto;
+  display:block;
+  margin:14px auto 10px;
+  border-radius:16px;
+  background:#fff;
+  padding:6px;
+}
+.qr-actions{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:12px;
+}
+.download-qr{
+  display:inline-block;
+  text-decoration:none;
+  background:#16a34a;
+  color:#fff;
+  border-radius:10px;
+  padding:10px 13px;
+  font-weight:900;
+  font-size:13px;
+}
+.download-qr.secondary{
+  background:#2563eb;
+}
+.payment-info{
+  background:#0f1724;
+  border:1px solid #2b3748;
+  border-radius:14px;
+  padding:18px;
+}
+.payment-info h3{
+  color:#38bdf8;
+  margin-bottom:12px;
+}
+.payment-info ol{
+  padding-left:20px;
+  color:#cbd5e1;
+  line-height:1.6;
+}
+.customer-form{
+  margin-top:22px;
+  background:#0f1724;
+  border:1px solid #2b3748;
+  border-radius:14px;
+  padding:18px;
+}
+.customer-form h3{
+  color:#f8fafc;
+  margin-bottom:14px;
+}
+.checkout-card input,
+.checkout-card textarea{
+  width:100%;
+  background:#0b1020;
+  border:1px solid #2b3748;
+  color:#fff;
+  padding:14px;
+  border-radius:10px;
+  outline:none;
+}
+.checkout-card textarea{
+  resize:vertical;
+  min-height:140px;
+  line-height:1.5;
+}
+.checkout-card input:focus,
+.checkout-card textarea:focus,
+.checkout-card select:focus{
+  border-color:#38bdf8;
+  box-shadow:0 0 0 3px rgba(56,189,248,.12);
+}
+.form-note{
+  color:#aab4c3;
+  font-size:13px;
+  line-height:1.45;
+  margin-top:8px;
+}
+.whatsapp-order{
+  background:#16a34a;
+  letter-spacing:.2px;
+}
+@media(max-width:720px){
+  .payment-section{grid-template-columns:1fr}
+}
