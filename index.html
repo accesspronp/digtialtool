@@ -5,7 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>DigitalToolsNepal</title>
   <link rel="stylesheet" href="style.css"/>
-</head>
+
+<style>
+.nav-dropdown {
+  position:absolute;
+  top:52px;
+  left:0;
+  width:100%;
+  background:#0f1724;
+  display:none;
+  padding:20px;
+  box-shadow:0 12px 30px rgba(0,0,0,.5);
+  z-index:9999;
+  flex-wrap:wrap;
+  gap:24px;
+}
+.nav-item:hover .nav-dropdown{
+  display:flex;
+}
+.nav-dropdown .item{
+  width:180px;
+  background:#111b2d;
+  border-radius:12px;
+  padding:14px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  transition:.3s;
+}
+.nav-dropdown .item img{
+  width:80px;
+  height:80px;
+  object-fit:contain;
+  margin-bottom:12px;
+}
+.nav-dropdown .item:hover{
+  transform:scale(1.05);
+  box-shadow:0 12px 28px rgba(0,0,0,.35);
+}
+.nav-dropdown .item p{
+  font-size:14px;
+  color:#f3f4f6;
+  text-align:center;
+  margin-top:4px;
+}
+</style>
+<style>
+.nav-dropdown .item p{font-size:12px;color:#d1d5db;margin-top:2px;}
+.nav-dropdown{gap:12px;padding:14px;}
+.nav-dropdown .item{width:140px;padding:10px;}
+</style><style>
+.nav-dropdown .item p{font-size:12px;color:#d1d5db;margin-top:2px;}
+.nav-dropdown{gap:12px;padding:14px;}
+.nav-dropdown .item{width:140px;padding:10px;}
+.full-banner{width:100%;height:auto;display:block;margin-top:0px;}
+</style></head>
 <body>
 
 
@@ -32,7 +86,25 @@
     <a href="#products">◈ Categories</a>
     <a href="#products">Games⌄</a>
     <a href="#products">Software⌄</a>
-    <a href="#products">Streaming Services⌄</a>
+    
+<div class="nav-item">
+  <a href="#">Streaming Services ⌄</a>
+  <div class="nav-dropdown">
+    <div class="item"><img src="netflix.jpg"/><p>Netflix</p></div>
+    <div class="item"><img src="prime-video.jpg"/><p>Prime Video</p></div>
+    <div class="item"><img src="crunchyroll.jpg"/><p>Crunchyroll</p></div>
+    <div class="item"><img src="hbo-max.jpg"/><p>HBO Max</p></div>
+    <div class="item"><img src="zee5.jpg"/><p>ZEE5</p></div>
+    <div class="item"><img src="hungama.jpg"/><p>Hungama OTT</p></div>
+    <div class="item"><img src="youtube.jpg"/><p>YouTube</p></div>
+    <div class="item"><img src="spotify.jpg"/><p>Spotify</p></div>
+    <div class="item"><img src="claude.jpg"/><p>Claude AI</p></div>
+    <div class="item"><img src="chatgpt.jpg"/><p>ChatGPT</p></div>
+    <div class="item"><img src="gemini.jpg"/><p>Gemini</p></div>
+    <div class="item"><img src="canva.jpg"/><p>Canva Pro</p></div>
+  </div>
+</div>
+
   </div>
   <div class="nav-icons">
     <button>⌕</button>
@@ -41,22 +113,37 @@
   </div>
 </nav>
 
+
 <section class="hero">
-  <img src="hero-banner.jpg" alt="DigitalToolsNepal premium banner">
+  <img src="hero-banner.jpg" alt="DigitalToolsNepal premium banner" class="full-banner">
 </section>
+
 
 <main>
   <section class="collection" id="products">
     <div class="section-head">
       <div>
         <span>Featured Collection</span>
-        <h2>Featured Products <small>(6 products)</small></h2>
+        <h2>Featured Products <small>(22 products)</small></h2>
       </div>
       <a href="#products">View All</a>
     </div>
 
     <div class="grid">
       
+
+      <article class="product-card featured-card">
+        <div class="product-img"><img src="minecraft-java-bedrock.jpg" alt="Minecraft Java and Bedrock Combo Full Access"></div>
+        <button class="wish">♡</button>
+        <div class="badges"><span>GAME ACCOUNT</span><span>FULL ACCESS</span></div>
+        <p class="category">MINECRAFT</p>
+        <h3>Minecraft Java &amp; Bedrock Combo</h3>
+        <p class="muted">Full access non-played account with payment proof</p>
+        <h4>NPR 1,999</h4>
+        <p class="muted">Per account</p>
+        <a class="buy-btn" href="buy.html?product=minecraft_combo">BUY NOW →</a>
+      </article>
+
       <article class="product-card">
         <div class="product-img"><img src="netflix.jpg" alt="Netflix Premium Subscription in Nepal"></div>
         <button class="wish">♡</button>
@@ -87,8 +174,8 @@
         <div class="badges"><span>SUBSCRIPTION</span><span>DIGITAL</span></div>
         <p class="category">CLAUDE AI</p>
         <h3>Claude AI MAX Plans</h3>
-        <p class="muted">MAX 5x Plan - 3 Months, MAX 20x Plan - 3 Months</p>
-        <h4>NPR 5,499</h4>
+        <p class="muted">MAX 5x Sharing - 3 Months, MAX 5x - 3 Months, MAX 20x - 3 Months</p>
+        <h4>NPR 3,599</h4>
         <p class="muted">Various options available</p>
         <a class="buy-btn" href="buy.html?product=claude">BUY NOW →</a>
       </article>
@@ -129,26 +216,259 @@
         <a class="buy-btn" href="buy.html?product=spotify">BUY NOW →</a>
       </article>
 
+      <article class="product-card">
+        <div class="product-img"><img src="prime-video.jpg" alt="Amazon Prime Video 6 Months Plan"></div>
+        <button class="wish">♡</button>
+        <div class="badges"><span>SUBSCRIPTION</span><span>DIGITAL</span></div>
+        <p class="category">PRIME VIDEO</p>
+        <h3>Amazon Prime Video 6 Months Plan</h3>
+        <p class="muted">6 Months Plan</p>
+        <h4>NPR 399</h4>
+        <p class="muted">Various options available</p>
+        <a class="buy-btn" href="buy.html?product=prime_video">BUY NOW →</a>
+      </article>
+
+      <article class="product-card">
+        <div class="product-img"><img src="crunchyroll.jpg" alt="Crunchyroll Premium 1 Year"></div>
+        <button class="wish">♡</button>
+        <div class="badges"><span>SUBSCRIPTION</span><span>DIGITAL</span></div>
+        <p class="category">CRUNCHYROLL</p>
+        <h3>Crunchyroll Premium 1 Year</h3>
+        <p class="muted">1 Year Plan</p>
+        <h4>NPR 1,499</h4>
+        <p class="muted">Various options available</p>
+        <a class="buy-btn" href="buy.html?product=crunchyroll">BUY NOW →</a>
+      </article>
+
+      <article class="product-card">
+        <div class="product-img"><img src="hbo-max.jpg" alt="HBO Max 1 Month"></div>
+        <button class="wish">♡</button>
+        <div class="badges"><span>SUBSCRIPTION</span><span>DIGITAL</span></div>
+        <p class="category">HBO MAX</p>
+        <h3>HBO Max 1 Month</h3>
+        <p class="muted">1 Month Plan</p>
+        <h4>NPR 399</h4>
+        <p class="muted">Various options available</p>
+        <a class="buy-btn" href="buy.html?product=hbo_max">BUY NOW →</a>
+      </article>
+
+      <article class="product-card">
+        <div class="product-img"><img src="zee5.jpg" alt="ZEE5 Subscription in Nepal"></div>
+        <button class="wish">♡</button>
+        <div class="badges"><span>SUBSCRIPTION</span><span>DIGITAL</span></div>
+        <p class="category">ZEE5</p>
+        <h3>ZEE5 Subscription in Nepal</h3>
+        <p class="muted">Nepal Plan</p>
+        <h4>NPR 299</h4>
+        <p class="muted">Various options available</p>
+        <a class="buy-btn" href="buy.html?product=zee5">BUY NOW →</a>
+      </article>
+
+      <article class="product-card">
+        <div class="product-img"><img src="hungama.jpg" alt="Hungama OTT Subscription"></div>
+        <button class="wish">♡</button>
+        <div class="badges"><span>SUBSCRIPTION</span><span>DIGITAL</span></div>
+        <p class="category">HUNGAMA OTT</p>
+        <h3>Hungama OTT Subscription</h3>
+        <p class="muted">OTT Plan</p>
+        <h4>NPR 599</h4>
+        <p class="muted">Various options available</p>
+        <a class="buy-btn" href="buy.html?product=hungama">BUY NOW →</a>
+      </article>
+
+      <article class="product-card">
+        <div class="product-img"><img src="linkedin.jpg" alt="LinkedIn Premium 3 Months"></div>
+        <button class="wish">♡</button>
+        <div class="badges"><span>SUBSCRIPTION</span><span>DIGITAL</span></div>
+        <p class="category">LINKEDIN</p>
+        <h3>LinkedIn Premium 3 Months</h3>
+        <p class="muted">3 Months Plan</p>
+        <h4>NPR 1,999</h4>
+        <p class="muted">Various options available</p>
+        <a class="buy-btn" href="buy.html?product=linkedin">BUY NOW →</a>
+      </article>
+
+      <article class="product-card">
+        <div class="product-img"><img src="canva.jpg" alt="Canva Pro 1 Year Own Email"></div>
+        <button class="wish">♡</button>
+        <div class="badges"><span>SUBSCRIPTION</span><span>DIGITAL</span></div>
+        <p class="category">CANVA PRO</p>
+        <h3>Canva Pro 1 Year Own Email</h3>
+        <p class="muted">1 Year, Own Email</p>
+        <h4>NPR 299</h4>
+        <p class="muted">Various options available</p>
+        <a class="buy-btn" href="buy.html?product=canva">BUY NOW →</a>
+      </article>
+
+      <article class="product-card">
+        <div class="product-img"><img src="perplexity.jpg" alt="Perplexity Pro Own Email"></div>
+        <button class="wish">♡</button>
+        <div class="badges"><span>SUBSCRIPTION</span><span>DIGITAL</span></div>
+        <p class="category">PERPLEXITY</p>
+        <h3>Perplexity Pro Own Email</h3>
+        <p class="muted">Own Email Plan</p>
+        <h4>Contact for price</h4>
+        <p class="muted">Various options available</p>
+        <a class="buy-btn" href="buy.html?product=perplexity">BUY NOW →</a>
+      </article>
+
+      <article class="product-card">
+        <div class="product-img"><img src="brazzers.jpg" alt="Brazzers Premium 1 Year Own Email"></div>
+        <button class="wish">♡</button>
+        <div class="badges"><span>SUBSCRIPTION</span><span>DIGITAL</span></div>
+        <p class="category">ADULT PREMIUM</p>
+        <h3>Brazzers Premium 1 Year Own Email</h3>
+        <p class="muted">1 Year, Own Email</p>
+        <h4>NPR 999</h4>
+        <p class="muted">Various options available</p>
+        <a class="buy-btn" href="buy.html?product=brazzers">BUY NOW →</a>
+      </article>
+
+      <article class="product-card">
+        <div class="product-img"><img src="adobe-creative-cloud.jpg" alt="Adobe Creative Cloud 4 Months Prepaid"></div>
+        <button class="wish">♡</button>
+        <div class="badges"><span>SUBSCRIPTION</span><span>DIGITAL</span></div>
+        <p class="category">ADOBE CREATIVE CLOUD</p>
+        <h3>Adobe Creative Cloud 4 Months Prepaid</h3>
+        <p class="muted">4 Months Prepaid, Own Email</p>
+        <h4>NPR 2,000</h4>
+        <p class="muted">Various options available</p>
+        <a class="buy-btn" href="buy.html?product=adobe_cc">BUY NOW →</a>
+      </article>
+
+      <article class="product-card">
+        <div class="product-img"><img src="capcut.jpg" alt="CapCut Pro 1 Month"></div>
+        <button class="wish">♡</button>
+        <div class="badges"><span>SUBSCRIPTION</span><span>DIGITAL</span></div>
+        <p class="category">CAPCUT PRO</p>
+        <h3>CapCut Pro 1 Month</h3>
+        <p class="muted">1 Month Plan</p>
+        <h4>NPR 499</h4>
+        <p class="muted">Various options available</p>
+        <a class="buy-btn" href="buy.html?product=capcut">BUY NOW →</a>
+      </article>
+
+      <article class="product-card">
+        <div class="product-img"><img src="faphouse.jpg" alt="Faphouse Premium 1 Month"></div>
+        <button class="wish">♡</button>
+        <div class="badges"><span>SUBSCRIPTION</span><span>DIGITAL</span></div>
+        <p class="category">ADULT PREMIUM</p>
+        <h3>Faphouse Premium 1 Month</h3>
+        <p class="muted">1 Month Plan</p>
+        <h4>NPR 299</h4>
+        <p class="muted">Various options available</p>
+        <a class="buy-btn" href="buy.html?product=faphouse">BUY NOW →</a>
+      </article>
+
+      <article class="product-card">
+        <div class="product-img"><img src="pornhub.jpg" alt="Pornhub Premium 1 Year Plan"></div>
+        <button class="wish">♡</button>
+        <div class="badges"><span>SUBSCRIPTION</span><span>DIGITAL</span></div>
+        <p class="category">ADULT PREMIUM</p>
+        <h3>Pornhub Premium 1 Year Plan</h3>
+        <p class="muted">1 Year Plan</p>
+        <h4>NPR 2,599</h4>
+        <p class="muted">Various options available</p>
+        <a class="buy-btn" href="buy.html?product=pornhub">BUY NOW →</a>
+      </article>
+
+      <article class="product-card">
+        <div class="product-img"><img src="netflix-prime-combo.jpg" alt="Netflix + Amazon Prime 1 Month Combo"></div>
+        <button class="wish">♡</button>
+        <div class="badges"><span>SUBSCRIPTION</span><span>DIGITAL</span></div>
+        <p class="category">COMBO OFFER</p>
+        <h3>Netflix + Amazon Prime 1 Month Combo</h3>
+        <p class="muted">1 Month Combo Only</p>
+        <h4>NPR 449</h4>
+        <p class="muted">Various options available</p>
+        <a class="buy-btn" href="buy.html?product=netflix_prime_combo">BUY NOW →</a>
+      </article>
+
+      <article class="product-card">
+        <div class="product-img"><img src="shark-vpn.jpg" alt="Shark VPN 1 Month"></div>
+        <button class="wish">♡</button>
+        <div class="badges"><span>SUBSCRIPTION</span><span>DIGITAL</span></div>
+        <p class="category">SHARK VPN</p>
+        <h3>Shark VPN 1 Month</h3>
+        <p class="muted">1 Month Plan</p>
+        <h4>NPR 99</h4>
+        <p class="muted">Various options available</p>
+        <a class="buy-btn" href="buy.html?product=shark_vpn">BUY NOW →</a>
+      </article>
+
     </div>
   </section>
 </main>
 
-<footer>
-  <div>
-    <h2>DigitalToolsNepal</h2>
-    <p>Your trusted digital subscription store in Nepal.</p>
+<footer class="site-footer" id="contact">
+  <div class="footer-main">
+    <div class="footer-col footer-about">
+      <h2>About DigitalToolsNepal</h2>
+      <p>DigitalToolsNepal is your one-stop destination in Nepal for digital subscriptions, OTT plans, AI tools, software, VPN access, and premium online services at competitive prices.</p>
+      <div class="social-links" aria-label="Social links">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Twitter">Twitter</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="YouTube">YouTube</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <a href="index.html">Home</a>
+      <a href="index.html#products">Streaming Services</a>
+      <a href="index.html#products">Software</a>
+      <a href="index.html#products">AI Tools</a>
+      <a href="index.html#products">VPN</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Customer Service</h3>
+      <a href="https://wa.me/9779860203327" target="_blank" rel="noopener">Help Center</a>
+      <a href="https://wa.me/9779860203327?text=Hello%20DigitalToolsNepal%2C%20how%20do%20I%20order%3F" target="_blank" rel="noopener">How to Order</a>
+      <a href="#contact">Delivery Information</a>
+      <a href="#contact">Payment Methods</a>
+      <a href="#contact">Return & Refund Policy</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+
+    <div class="footer-col footer-contact">
+      <h3>Contact Us</h3>
+      <p>Kathmandu, Nepal</p>
+      <p><a href="https://wa.me/9779860203327" target="_blank" rel="noopener">WhatsApp: +977 9860203327</a></p>
+      <p><a href="mailto:support@digitaltoolsnepal.com">support@digitaltoolsnepal.com</a></p>
+      <h3 class="payment-title">Accepted Payment Methods</h3>
+      <div class="payment-methods">
+        <span>eSewa</span>
+        <span>Connect IPS</span>
+        <span>Khalti</span>
+        <span>Internet Banking</span>
+        <span>Visa</span>
+        <span>MasterCard</span>
+      </div>
+    </div>
   </div>
-  <div>
-    <h3>Quick Links</h3>
-    <p>Home · Streaming Services · Software · AI Tools</p>
+
+  <div class="trust-row">
+    <div class="trust-card"><strong>Secure Payment</strong><span>All transactions are secure and encrypted</span></div>
+    <div class="trust-card"><strong>100% Authentic</strong><span>All products are original and verified</span></div>
+    <div class="trust-card"><strong>24/7 Support</strong><span>Get help whenever you need it</span></div>
   </div>
-  <div>
-    <h3>Contact Us</h3>
-    <p>Kathmandu, Nepal</p>
-    <p>Phone / WhatsApp: 9860203327</p>
+
+  <div class="footer-bottom">
+    <p>© 2026 DigitalToolsNepal. All rights reserved.</p>
+    <div class="legal-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Cookies Policy</a>
+    </div>
   </div>
-  <div class="copy">© 2026 DigitalToolsNepal. All rights reserved.</div>
 </footer>
+
+<a class="whatsapp-float" href="https://wa.me/9779860203327?text=Hello%20DigitalToolsNepal%2C%20I%20need%20support" target="_blank" rel="noopener" aria-label="WhatsApp Support 24/7">
+  <span class="whatsapp-icon">☏</span>
+  <span><strong>WhatsApp Support</strong><small>24/7 Online</small></span>
+</a>
 
 <script src="script.js"></script>
 </body>

@@ -42,56 +42,274 @@
       <div class="total"><span>Total</span><strong id="totalPrice">NPR 0</strong></div>
     </div>
 
-    <div class="qr-box">
-      <h3>Khalti QR</h3>
-      <p>QR Coming Soon</p>
+    <div class="payment-section">
+      <div class="qr-box payment-qr-box">
+        <h3>Scan &amp; Pay</h3>
+        <p>Pay via Khalti or send from bank to this QR.</p>
+        <img src="payment-qr.png" alt="DigitalToolsNepal payment QR code">
+        <div class="qr-actions">
+          <a class="download-qr" href="payment-qr.png" download="DigitalToolsNepal-payment-QR.png">Download QR</a>
+          <a class="download-qr secondary" href="payment-qr.png" target="_blank" rel="noopener">Open QR</a>
+        </div>
+      </div>
+
+      <div class="payment-info">
+        <h3>How to complete payment</h3>
+        <ol>
+          <li>Scan the QR and pay the total amount shown above.</li>
+          <li>Fill your name, email, WhatsApp number, and select/upload your payment screenshot.</li>
+          <li>Tap the WhatsApp button. When WhatsApp opens, send the screenshot in the chat.</li>
+        </ol>
+      </div>
     </div>
 
-    <button class="place-order" onclick="placeOrder()">PLACE ORDER</button>
-    <p class="help">Need help? Call / WhatsApp: 9860203327</p>
+    <div class="customer-form">
+      <h3>Payment Confirmation Details</h3>
+
+      <label for="customerName">Full Name</label>
+      <input id="customerName" type="text" placeholder="Enter your name" required>
+
+      <label for="customerEmail">Email Address</label>
+      <input id="customerEmail" type="email" placeholder="Enter your email" required>
+
+      <label for="customerWhatsapp">WhatsApp Number</label>
+      <input id="customerWhatsapp" type="tel" placeholder="+977 98XXXXXXXX" required>
+
+      <label for="paymentMethod">Payment Method</label>
+      <select id="paymentMethod">
+        <option value="Khalti QR">Khalti QR</option>
+        <option value="Bank Transfer QR">Bank Transfer QR</option>
+        <option value="eSewa">eSewa</option>
+        <option value="Connect IPS">Connect IPS</option>
+        <option value="Internet Banking">Internet Banking</option>
+      </select>
+
+      <label for="paymentScreenshot">Payment Screenshot</label>
+      <input id="paymentScreenshot" type="file" accept="image/*,.pdf">
+      <p class="form-note">Select your payment screenshot here. After WhatsApp opens, attach this screenshot in the chat for verification.</p>
+
+      <label for="orderMessage">Message / Description to Send</label>
+      <textarea id="orderMessage" rows="7" placeholder="Your WhatsApp order message will appear here."></textarea>
+    </div>
+
+    <button class="place-order whatsapp-order" onclick="placeOrder()">PAYMENT DONE - SEND ON WHATSAPP</button>
+    <p class="help">Need help? WhatsApp: +977 9860203327. After redirect, send your payment screenshot for faster delivery.</p>
   </div>
 </section>
 
+<footer class="site-footer" id="contact">
+  <div class="footer-main">
+    <div class="footer-col footer-about">
+      <h2>About DigitalToolsNepal</h2>
+      <p>DigitalToolsNepal is your one-stop destination in Nepal for digital subscriptions, OTT plans, AI tools, software, VPN access, and premium online services at competitive prices.</p>
+      <div class="social-links" aria-label="Social links">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Twitter">Twitter</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="YouTube">YouTube</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <a href="index.html">Home</a>
+      <a href="index.html#products">Streaming Services</a>
+      <a href="index.html#products">Software</a>
+      <a href="index.html#products">AI Tools</a>
+      <a href="index.html#products">VPN</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Customer Service</h3>
+      <a href="https://wa.me/9779860203327" target="_blank" rel="noopener">Help Center</a>
+      <a href="https://wa.me/9779860203327?text=Hello%20DigitalToolsNepal%2C%20how%20do%20I%20order%3F" target="_blank" rel="noopener">How to Order</a>
+      <a href="#contact">Delivery Information</a>
+      <a href="#contact">Payment Methods</a>
+      <a href="#contact">Return & Refund Policy</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+
+    <div class="footer-col footer-contact">
+      <h3>Contact Us</h3>
+      <p>Kathmandu, Nepal</p>
+      <p><a href="https://wa.me/9779860203327" target="_blank" rel="noopener">WhatsApp: +977 9860203327</a></p>
+      <p><a href="mailto:support@digitaltoolsnepal.com">support@digitaltoolsnepal.com</a></p>
+      <h3 class="payment-title">Accepted Payment Methods</h3>
+      <div class="payment-methods">
+        <span>eSewa</span>
+        <span>Connect IPS</span>
+        <span>Khalti</span>
+        <span>Internet Banking</span>
+        <span>Visa</span>
+        <span>MasterCard</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="trust-row">
+    <div class="trust-card"><strong>Secure Payment</strong><span>All transactions are secure and encrypted</span></div>
+    <div class="trust-card"><strong>100% Authentic</strong><span>All products are original and verified</span></div>
+    <div class="trust-card"><strong>24/7 Support</strong><span>Get help whenever you need it</span></div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 DigitalToolsNepal. All rights reserved.</p>
+    <div class="legal-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Cookies Policy</a>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/9779860203327?text=Hello%20DigitalToolsNepal%2C%20I%20need%20support" target="_blank" rel="noopener" aria-label="WhatsApp Support 24/7">
+  <span class="whatsapp-icon">☏</span>
+  <span><strong>WhatsApp Support</strong><small>24/7 Online</small></span>
+</a>
+
 <script>
 const PRODUCTS = {
+  "minecraft_combo": {
+    title: "Minecraft Java & Bedrock Combo",
+    category: "MINECRAFT",
+    img: "minecraft-java-bedrock.jpg",
+    options: [{"label": "Full Access Non-Played Account with Payment Proof", "price": 1999}]
+  },
   "netflix": {
     title: "Netflix Premium Subscription in Nepal",
+    category: "NETFLIX",
     img: "netflix.jpg",
-    options: [{label:"2 Months", price:549}, {label:"3 Months", price:799}, {label:"6 Months", price:1349}, {label:"9 Months", price:1749}, {label:"12 Months", price:2399}]
+    options: [{"label": "2 Months", "price": 549}, {"label": "3 Months", "price": 799}, {"label": "6 Months", "price": 1349}, {"label": "9 Months", "price": 1749}, {"label": "12 Months", "price": 2399}]
   },
   "chatgpt": {
     title: "ChatGPT Plus Premium AI Access",
+    category: "CHATGPT PLUS",
     img: "chatgpt.jpg",
-    options: [{label:"1 Month", price:499}, {label:"2 Months", price:999}, {label:"3 Months", price:1399}, {label:"6 Months", price:2499}, {label:"12 Months", price:4649}]
+    options: [{"label": "1 Month", "price": 499}, {"label": "2 Months", "price": 999}, {"label": "3 Months", "price": 1399}, {"label": "6 Months", "price": 2499}, {"label": "12 Months", "price": 4649}]
   },
   "claude": {
     title: "Claude AI MAX Plans",
+    category: "CLAUDE AI",
     img: "claude.jpg",
-    options: [{label:"MAX 5x Plan - 3 Months", price:5499}, {label:"MAX 20x Plan - 3 Months", price:17000}]
+    options: [{"label": "MAX 5x Plan - 3 Months Sharing", "price": 3599}, {"label": "MAX 5x Plan - 3 Months", "price": 5499}, {"label": "MAX 20x Plan - 3 Months", "price": 17000}]
   },
   "gemini": {
     title: "Gemini AI Pro 5TB 18 Months",
+    category: "GEMINI AI PRO",
     img: "gemini.jpg",
-    options: [{label:"5TB 18 Months Own Email", price:2899}, {label:"5TB 18 Months Family Invite", price:1899}]
+    options: [{"label": "5TB 18 Months Own Email", "price": 2899}, {"label": "5TB 18 Months Family Invite", "price": 1899}]
   },
   "youtube": {
     title: "YouTube Premium 12 Months",
+    category: "YOUTUBE PREMIUM",
     img: "youtube.jpg",
-    options: [{label:"12 Months", price:1999}]
+    options: [{"label": "12 Months", "price": 1999}]
   },
   "spotify": {
     title: "Spotify Premium Individual Plan",
+    category: "SPOTIFY",
     img: "spotify.jpg",
-    options: [{label:"6 Months Individual", price:1499}, {label:"1 Year Individual", price:2999}]
+    options: [{"label": "6 Months Individual", "price": 1499}, {"label": "1 Year Individual", "price": 2999}]
+  },
+  "prime_video": {
+    title: "Amazon Prime Video 6 Months Plan",
+    category: "PRIME VIDEO",
+    img: "prime-video.jpg",
+    options: [{"label": "6 Months", "price": 399}]
+  },
+  "crunchyroll": {
+    title: "Crunchyroll Premium 1 Year",
+    category: "CRUNCHYROLL",
+    img: "crunchyroll.jpg",
+    options: [{"label": "1 Year", "price": 1499}]
+  },
+  "hbo_max": {
+    title: "HBO Max 1 Month",
+    category: "HBO MAX",
+    img: "hbo-max.jpg",
+    options: [{"label": "1 Month", "price": 399}]
+  },
+  "zee5": {
+    title: "ZEE5 Subscription in Nepal",
+    category: "ZEE5",
+    img: "zee5.jpg",
+    options: [{"label": "Nepal Plan", "price": 299}]
+  },
+  "hungama": {
+    title: "Hungama OTT Subscription",
+    category: "HUNGAMA OTT",
+    img: "hungama.jpg",
+    options: [{"label": "OTT Plan", "price": 599}]
+  },
+  "linkedin": {
+    title: "LinkedIn Premium 3 Months",
+    category: "LINKEDIN",
+    img: "linkedin.jpg",
+    options: [{"label": "3 Months", "price": 1999}]
+  },
+  "canva": {
+    title: "Canva Pro 1 Year Own Email",
+    category: "CANVA PRO",
+    img: "canva.jpg",
+    options: [{"label": "1 Year - Own Email", "price": 299}]
+  },
+  "perplexity": {
+    title: "Perplexity Pro Own Email",
+    category: "PERPLEXITY",
+    img: "perplexity.jpg",
+    options: [{"label": "Own Email Plan - Contact for price", "price": null}]
+  },
+  "brazzers": {
+    title: "Brazzers Premium 1 Year Own Email",
+    category: "ADULT PREMIUM",
+    img: "brazzers.jpg",
+    options: [{"label": "1 Year - Own Email", "price": 999}]
+  },
+  "adobe_cc": {
+    title: "Adobe Creative Cloud 4 Months Prepaid",
+    category: "ADOBE CREATIVE CLOUD",
+    img: "adobe-creative-cloud.jpg",
+    options: [{"label": "4 Months Prepaid - Own Email", "price": 2000}]
+  },
+  "capcut": {
+    title: "CapCut Pro 1 Month",
+    category: "CAPCUT PRO",
+    img: "capcut.jpg",
+    options: [{"label": "1 Month", "price": 499}]
+  },
+  "faphouse": {
+    title: "Faphouse Premium 1 Month",
+    category: "ADULT PREMIUM",
+    img: "faphouse.jpg",
+    options: [{"label": "1 Month", "price": 299}]
+  },
+  "pornhub": {
+    title: "Pornhub Premium 1 Year Plan",
+    category: "ADULT PREMIUM",
+    img: "pornhub.jpg",
+    options: [{"label": "1 Year", "price": 2599}]
+  },
+  "netflix_prime_combo": {
+    title: "Netflix + Amazon Prime 1 Month Combo",
+    category: "COMBO OFFER",
+    img: "netflix-prime-combo.jpg",
+    options: [{"label": "1 Month Combo", "price": 449}]
+  },
+  "shark_vpn": {
+    title: "Shark VPN 1 Month",
+    category: "SHARK VPN",
+    img: "shark-vpn.jpg",
+    options: [{"label": "1 Month", "price": 99}]
   }
 };
 
 const params = new URLSearchParams(location.search);
-let current = params.get("product") || "netflix";
-if(!PRODUCTS[current]) current = "netflix";
+let current = params.get("product") || "minecraft_combo";
+if(!PRODUCTS[current]) current = "minecraft_combo";
 let qty = 1;
 
 function money(n) {
+  if (n === null || n === "" || Number.isNaN(Number(n))) return "Contact for price";
   return "NPR " + Number(n).toLocaleString();
 }
 
@@ -99,11 +317,12 @@ function loadProduct() {
   const p = PRODUCTS[current];
   document.getElementById("productImage").src = p.img;
   document.getElementById("productTitle").innerText = p.title;
+  document.getElementById("productCategory").innerText = p.category || "DIGITAL PRODUCT";
   const select = document.getElementById("planSelect");
   select.innerHTML = "";
   p.options.forEach(o => {
     const option = document.createElement("option");
-    option.value = o.price;
+    option.value = o.price === null ? "" : o.price;
     option.textContent = o.label + " - " + money(o.price);
     select.appendChild(option);
   });
@@ -117,16 +336,73 @@ function changeQty(v) {
   updateTotal();
 }
 
+function getSelectedOption() {
+  const select = document.getElementById("planSelect");
+  return select.options[select.selectedIndex] ? select.options[select.selectedIndex].textContent : "";
+}
+
+function getTotalText() {
+  return document.getElementById("totalPrice").innerText;
+}
+
 function updateTotal() {
-  const price = Number(document.getElementById("planSelect").value || 0);
+  const rawPrice = document.getElementById("planSelect").value;
+  if (rawPrice === "") {
+    document.getElementById("planPrice").innerText = "Contact for price";
+    document.getElementById("qtyText").innerText = qty;
+    document.getElementById("totalPrice").innerText = "Contact for price";
+    updateMessagePreview();
+    return;
+  }
+  const price = Number(rawPrice || 0);
   document.getElementById("planPrice").innerText = money(price);
   document.getElementById("qtyText").innerText = qty;
   document.getElementById("totalPrice").innerText = money(price * qty);
+  updateMessagePreview();
+}
+
+function updateMessagePreview() {
+  const p = PRODUCTS[current];
+  const name = document.getElementById("customerName")?.value || "";
+  const email = document.getElementById("customerEmail")?.value || "";
+  const whatsapp = document.getElementById("customerWhatsapp")?.value || "";
+  const method = document.getElementById("paymentMethod")?.value || "Khalti QR";
+  const screenshot = document.getElementById("paymentScreenshot")?.files?.[0]?.name || "I will attach the screenshot in WhatsApp.";
+  const message = `Hello DigitalToolsNepal, I have completed payment.\n\nProduct: ${p.title}\nPlan: ${getSelectedOption()}\nQuantity: ${qty}\nTotal: ${getTotalText()}\n\nName: ${name}\nEmail: ${email}\nWhatsApp: ${whatsapp}\nPayment Method: ${method}\nPayment Screenshot: ${screenshot}\n\nPlease verify my payment and deliver the account. I will send the screenshot here.`;
+  const box = document.getElementById("orderMessage");
+  if (box) box.value = message;
 }
 
 function placeOrder() {
-  alert("Order noted. Please contact DigitalToolsNepal at 9860203327 for payment confirmation.");
+  updateMessagePreview();
+
+  const name = document.getElementById("customerName").value.trim();
+  const email = document.getElementById("customerEmail").value.trim();
+  const whatsapp = document.getElementById("customerWhatsapp").value.trim();
+  const screenshotInput = document.getElementById("paymentScreenshot");
+
+  if (!name || !email || !whatsapp) {
+    alert("Please enter your name, email, and WhatsApp number before redirecting.");
+    return;
+  }
+
+  if (!screenshotInput.files.length) {
+    const proceed = confirm("You have not selected a payment screenshot. Continue to WhatsApp and send the screenshot there?");
+    if (!proceed) return;
+  }
+
+  const message = document.getElementById("orderMessage").value.trim();
+  const url = "https://wa.me/9779860203327?text=" + encodeURIComponent(message);
+  window.open(url, "_blank");
 }
+
+["customerName","customerEmail","customerWhatsapp","paymentMethod","paymentScreenshot","orderMessage"].forEach(id => {
+  const el = document.getElementById(id);
+  if (el && id !== "orderMessage") {
+    el.addEventListener("input", updateMessagePreview);
+    el.addEventListener("change", updateMessagePreview);
+  }
+});
 
 loadProduct();
 </script>
