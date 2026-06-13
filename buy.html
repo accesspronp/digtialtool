@@ -44,9 +44,9 @@
 
     <div class="payment-section">
       <div class="qr-box payment-qr-box">
-        <h3>Scan &amp; Pay</h3>
-        <p>Pay via Khalti or send from bank to this QR.</p>
-        <img src="payment-qr.png" alt="DigitalToolsNepal payment QR code">
+        <h3>Contact on WhatsApp</h3>
+        <p>To purchase, get discounts, or ask questions, contact us directly on WhatsApp.</p>
+        <a href="https://wa.me/9779860203327" target="_blank">Chat on WhatsApp: +977 9860203327</a>
         <div class="qr-actions">
           <a class="download-qr" href="payment-qr.png" download="DigitalToolsNepal-payment-QR.png">Download QR</a>
           <a class="download-qr secondary" href="payment-qr.png" target="_blank" rel="noopener">Open QR</a>
@@ -64,7 +64,7 @@
     </div>
 
     <div class="customer-form">
-      <h3>Payment Confirmation Details</h3>
+      <h3>Purchase Details</h3>
 
       <label for="customerName">Full Name</label>
       <input id="customerName" type="text" placeholder="Enter your name" required>
@@ -75,7 +75,7 @@
       <label for="customerWhatsapp">WhatsApp Number</label>
       <input id="customerWhatsapp" type="tel" placeholder="+977 98XXXXXXXX" required>
 
-      <label for="paymentMethod">Payment Method</label>
+      <label for="paymentMethod">Contact Method</label>
       <select id="paymentMethod">
         <option value="Khalti QR">Khalti QR</option>
         <option value="Bank Transfer QR">Bank Transfer QR</option>
@@ -84,16 +84,14 @@
         <option value="Internet Banking">Internet Banking</option>
       </select>
 
-      <label for="paymentScreenshot">Payment Screenshot</label>
-      <input id="paymentScreenshot" type="file" accept="image/*,.pdf">
-      <p class="form-note">Select your payment screenshot here. After WhatsApp opens, attach this screenshot in the chat for verification.</p>
+      <p class="form-note">After clicking WhatsApp, contact us directly to purchase and receive any available discounts.</p>
 
       <label for="orderMessage">Message / Description to Send</label>
       <textarea id="orderMessage" rows="7" placeholder="Your WhatsApp order message will appear here."></textarea>
     </div>
 
-    <button class="place-order whatsapp-order" onclick="placeOrder()">PAYMENT DONE - SEND ON WHATSAPP</button>
-    <p class="help">Need help? WhatsApp: +977 9860203327. After redirect, send your payment screenshot for faster delivery.</p>
+    <button class="place-order whatsapp-order" onclick="placeOrder()">CONTACT SUPPORT ON WHATSAPP TO PURCHASE</button>
+    <p class="help">Need help? WhatsApp: +977 9860203327. Contact us directly on WhatsApp to purchase and receive discounts.</p>
   </div>
 </section>
 
@@ -124,7 +122,7 @@
       <a href="https://wa.me/9779860203327" target="_blank" rel="noopener">Help Center</a>
       <a href="https://wa.me/9779860203327?text=Hello%20DigitalToolsNepal%2C%20how%20do%20I%20order%3F" target="_blank" rel="noopener">How to Order</a>
       <a href="#contact">Delivery Information</a>
-      <a href="#contact">Payment Methods</a>
+      <a href="#contact">Contact Methods</a>
       <a href="#contact">Return & Refund Policy</a>
       <a href="#contact">Contact Us</a>
     </div>
@@ -134,7 +132,7 @@
       <p>Kathmandu, Nepal</p>
       <p><a href="https://wa.me/9779860203327" target="_blank" rel="noopener">WhatsApp: +977 9860203327</a></p>
       <p><a href="mailto:support@digitaltoolsnepal.com">support@digitaltoolsnepal.com</a></p>
-      <h3 class="payment-title">Accepted Payment Methods</h3>
+      <h3 class="payment-title">Accepted Contact Methods</h3>
       <div class="payment-methods">
         <span>eSewa</span>
         <span>Connect IPS</span>
@@ -368,7 +366,7 @@ function updateMessagePreview() {
   const whatsapp = document.getElementById("customerWhatsapp")?.value || "";
   const method = document.getElementById("paymentMethod")?.value || "Khalti QR";
   const screenshot = document.getElementById("paymentScreenshot")?.files?.[0]?.name || "I will attach the screenshot in WhatsApp.";
-  const message = `Hello DigitalToolsNepal, I have completed payment.\n\nProduct: ${p.title}\nPlan: ${getSelectedOption()}\nQuantity: ${qty}\nTotal: ${getTotalText()}\n\nName: ${name}\nEmail: ${email}\nWhatsApp: ${whatsapp}\nPayment Method: ${method}\nPayment Screenshot: ${screenshot}\n\nPlease verify my payment and deliver the account. I will send the screenshot here.`;
+  const message = `Hello DigitalToolsNepal, I have completed payment.\n\nProduct: ${p.title}\nPlan: ${getSelectedOption()}\nQuantity: ${qty}\nTotal: ${getTotalText()}\n\nName: ${name}\nEmail: ${email}\nWhatsApp: ${whatsapp}\nContact Method: ${method}\nPayment Screenshot: ${screenshot}\n\nPlease verify my payment and deliver the account. I will send the screenshot here.`;
   const box = document.getElementById("orderMessage");
   if (box) box.value = message;
 }
