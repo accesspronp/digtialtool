@@ -1,5 +1,5 @@
 const CONFIG = {
-  whatsapp: "9779800000000", // Replace with your real WhatsApp number, no + sign.
+  whatsapp: "9779745586084", // Replace with your real WhatsApp number, no + sign.
   storeName: "DigitalToolsNepal"
 };
 
