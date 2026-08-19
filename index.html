@@ -82,7 +82,7 @@
     </section>
 
     <section class="marquee">
-      <span>CHATGPT</span><i>•</i><span>CLAUDE</span><i>•</i><span>Netflix 3 Months - Rs 499 | 6 Months - Rs 999 | 12 Months - Rs 1899</span><i>•</i>
+      <span>CHATGPT</span><i>•</i><span>CLAUDE</span><i>•</i><span>Netflix 3 Months - Rs 499 | 6 Months - Rs 999 | 12 Months - Rs 1799</span><i>•</i>
       <span>SPOTIFY</span><i>•</i><span>ADOBE</span><i>•</i><span>CAPCUT</span><i>•</i><span>MICROSOFT 365</span>
     </section>
 
@@ -108,6 +108,19 @@
       </div>
 
       <div id="productGrid" class="product-grid"></div>
+      <div class="pricing-index" aria-label="Latest pricing">
+        <div class="pricing-index-head">
+          <div>
+            <div class="eyebrow">LATEST PRICING</div>
+            <h3>Updated launch plans</h3>
+          </div>
+          <div class="pricing-total-note">Select a plan to add it to your cart</div>
+        </div>
+        <div class="pricing-index-grid">
+          <div class="pricing-index-card"><b>Netflix</b><span>3 Months · Rs. 499</span><span>6 Months · Rs. 999</span><span>12 Months · Rs. 1,799</span></div>
+          <div class="pricing-index-card"><b>Google AI Pro</b><span>18 Months · Redeem Link</span><strong>Rs. 1,800</strong></div>
+        </div>
+      </div>
     </section>
 
     <section id="how" class="section how">
@@ -166,6 +179,20 @@
     <div>© <span id="year"></span></div>
   </footer>
 
+  <button id="cartButton" class="cart-button" aria-label="Open cart">🛒 <span>Cart</span><b id="cartCount">0</b></button>
+  <div id="cartDrawer" class="cart-drawer hidden" aria-hidden="true">
+    <div class="cart-backdrop" data-cart-close></div>
+    <aside class="cart-panel">
+      <button class="modal-close" data-cart-close aria-label="Close cart">×</button>
+      <div class="eyebrow">YOUR CART</div>
+      <h2>Selected plans</h2>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-total"><span>Total amount</span><strong id="cartTotal">Rs. 0</strong></div>
+      <button id="cartCheckout" class="btn primary full">Checkout selected plans →</button>
+      <button id="clearCart" class="btn secondary full">Clear cart</button>
+    </aside>
+  </div>
+
   <!-- Order modal -->
   <div id="orderModal" class="modal hidden" aria-hidden="true">
     <div class="modal-backdrop" data-close></div>
@@ -177,12 +204,18 @@
         <h2 id="modalProduct">Select a plan</h2>
         <p class="modal-muted">Tap your preferred plan to continue.</p>
         <div id="planOptions" class="plan-grid"></div>
+        <div class="selection-summary">
+          <div><span>Selected plan</span><b id="selectedPlanLabel">None</b></div>
+          <div><span>In total</span><strong id="selectedPlanTotal">Rs. 0</strong></div>
+        </div>
+        <div class="order-actions"><button id="orderBuyBtn" class="btn primary" disabled>Order Buy →</button><button id="addToCartBtn" class="btn secondary" disabled>Add to Cart +</button></div>
       </div>
 
       <div id="orderStep2" class="hidden">
         <div class="eyebrow">STEP 2 OF 3</div>
         <h2>Payment method</h2>
-        <p class="modal-muted">Payment method choose garnus.</p>
+        <p class="modal-muted">Review your selected plans, total amount, then choose a payment method.</p>
+        <div id="checkoutSummary" class="checkout-summary"></div>
         <div id="paymentMethods" class="payment-grid"></div>
         <div class="payment-preview hidden" id="paymentPreview">
           <div class="payment-head">
@@ -218,10 +251,3 @@
   <script src="app.js"></script>
 </body>
 </html>
-<!-- Updated launch pricing -->
-<section class="launch-pricing">
-<h3>Latest Plans</h3>
-<p>Netflix: 3 Months Rs 499 | 6 Months Rs 999 | 12 Months Rs 1899</p>
-<p>Google AI Pro: 18 Months Redeem Link Rs 1600</p>
-<p>YouTube Premium: 12 Months Your Mail Rs 1800</p>
-</section>
