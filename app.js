@@ -1,10 +1,10 @@
 const CONFIG = {
-  whatsapp: "9779745586084", // Replace with your real WhatsApp number, no + sign.
+  whatsapp: "9745586084", // Add your WhatsApp number without + sign.
   storeName: "DigitalToolsNepal"
 };
 
 const products = [
-  {id:"chatgpt-plus", name:"ChatGPT Plus", cat:"ai", logo:"◎", style:"chatgpt", desc:"Premium AI access for study, writing and daily work.", plans:[["1 Month","Rs. 2,200"],["3 Months","Rs. 4,400"],["12 Months","Rs. 17,000"]]},
+  {id:"chatgpt-plus", name:"ChatGPT Plus", cat:"ai", logo:"◎", style:"chatgpt", desc:"Premium AI access for study, writing and daily work.", plans:[["1 Month","No stock"],["3 Months","Rs. 1,499"],["6 Months","Rs. 2,900"],["12 Months","Rs. 5,600"]]},
   {id:"chatgpt-pro", name:"ChatGPT Pro", cat:"ai", logo:"◎", style:"chatgpt-pro", desc:"Higher-tier ChatGPT plan for heavy AI use and advanced access.", plans:[["1 Month","Rs. 2,200"],["3 Months","Rs. 4,500"],["12 Months","Rs. 17,000"]]},
   {id:"claude-pro", name:"Claude Pro", cat:"ai", logo:"C", style:"claude", desc:"Advanced AI for writing, coding and research.", plans:[["1 Month","Rs. 2,100"],["3 Months","Rs. 3,500"],["12 Months","Rs. 15,000"]]},
   {id:"claude-max", name:"Claude Max 5X", cat:"ai", logo:"C", style:"claude", desc:"Higher-capacity Claude plan with premium access.", plans:[["3 Months","Rs. 4,600"],["12 Months","Rs. 20,000"]]},
