@@ -1,7 +1,0 @@
-DigitalToolsNepal FastBots integration
-
-FastBots embed installed globally where </head> was available.
-Bot ID: cmt07u3sf016epe1pi175z4t1
-Business WhatsApp: +977 9745586084
-
-The FastBots knowledge base/instructions remain private in the FastBots account; do not expose internal bargaining rules to visitors.
