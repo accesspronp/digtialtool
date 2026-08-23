@@ -182,6 +182,16 @@ body.dtn-loading{overflow:hidden}
 .footer-contact div{margin-top:4px}
 .footer-contact a{color:#b39cff}
 
+/* ---------- mobile: stop the page shifting/scrolling sideways ---------- */
+html,body{max-width:100%;overflow-x:hidden}
+img,svg,video{max-width:100%}
+@media(max-width:600px){
+  .navbar{flex-wrap:wrap;height:auto;padding:12px 15px;row-gap:10px}
+  .auth-nav{flex-wrap:wrap;width:100%;justify-content:flex-end;gap:8px}
+  .wa-btn{padding:7px 9px;font-size:9px}
+  #authBtn,#logoutBtn{flex-basis:100%;width:100%;text-align:center;order:5;margin-top:2px}
+}
+
 /* hero card links + logo badges */
 a.hero-product{text-decoration:none;color:inherit;display:flex;gap:12px;align-items:center}
 .logo-badge{width:46px;height:46px;padding:6px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10);flex:none;overflow:hidden}

@@ -206,10 +206,6 @@ function page(p) {
           <img id="qrImage" src="" alt="${esc(p.name)} payment QR code Nepal">
           <div class="secure-row"><span>✓ Secure</span><span>⚡ Instant</span><span>✓ Safe</span></div>
         </div>
-        <div class="loop-video" style="margin-top:16px">
-          <span class="lv-tag">PAYMENT WALKTHROUGH</span>
-          <video src="../assets/Payment_Walkthrough.mp4" autoplay muted loop playsinline preload="metadata"></video>
-        </div>
       </div>
 
       <div class="step-block">
